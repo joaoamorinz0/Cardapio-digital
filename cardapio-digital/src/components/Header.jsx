@@ -1,17 +1,22 @@
-function Header() {
-    const openTime = 11;
-    const closeTime = 23;
-
-    if (openTime >= closeTime) {
-        
-    }
-
+function Header({ store }) {
     return (
         <header className="header">
-            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Logo do Cardápio Digital" className="logo" />
-            <h1>Cardápio Digital</h1>
-            <h2>Os melhores Hamburgueres e batatas da cidade!</h2>
-            <p className="operating-hours">Funcionamento: {openTime}:00 às {closeTime}:00</p>
+            <div className="brand">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+                    alt="Logo do Cardápio Digital"
+                    className="logo"
+                />
+                <div>
+                    <h1>{store.name}</h1>
+                    <p className="tagline">{store.tagline}</p>
+                </div>
+            </div>
+
+            <div className="header-meta">
+                <span>📍 Entrega</span>
+                <span>🕒 {store.hours}</span>
+            </div>
         </header>
     );
 }

@@ -1,15 +1,18 @@
-function CategoryNav() {
-    const categories = ['Hambúrgueres', 'Acompanhamentos', 'Sobremesas', 'Bebidas'];
-
+function CategoryNav({ categories, activeCategory, onChange }) {
     return (
-        <nav className="category-nav">
-            <ul>
-                {categories.map((category, index) => (
-                    <li key={index}>
-                        <a className="category-link" href={`#${category.toLowerCase().replace(' ', '-')}`}>{category}</a>
-                    </li>
-                ))}
-            </ul>
+        <nav className="category-nav" aria-label="Categorias do cardápio">
+            {categories.map((category) => (
+                <button
+                    key={category.id}
+                    type="button"
+                    className={`category-button ${
+                        activeCategory === category.id ? 'is-selected' : ''
+                    }`}
+                    onClick={() => onChange(category.id)}
+                >
+                    {category.name}
+                </button>
+            ))}
         </nav>
     );
 }

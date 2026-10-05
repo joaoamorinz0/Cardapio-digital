@@ -25,3 +25,6 @@ dist-ssr
 
 # Arquivos de ambiente
 .env
+
+# Checklist local da V1
+V1_CHECKLIST.md
