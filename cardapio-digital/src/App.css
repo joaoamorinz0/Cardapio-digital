@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #ff7b00;
+  --secondary-color: #ffdf77;
+  --background-color: #f0f0f0;
+  --text-color: #333333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.category-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  justify-content: space-between;
+}
