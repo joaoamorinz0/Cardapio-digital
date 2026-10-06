@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
 dist
 dist-ssr
 *.local
@@ -25,6 +25,8 @@ dist-ssr
 
 # Arquivos de ambiente
 .env
+.env.*
+!.env.example
 
 # Checklist local da V1
 V1_CHECKLIST.md

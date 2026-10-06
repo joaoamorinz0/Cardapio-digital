@@ -10,6 +10,7 @@ import StoreInfoModal from './components/StoreInfoModal.jsx';
 import CheckoutForm from './components/CheckoutForm.jsx';
 import { categories, products, storeInfo } from './data.js';
 import './App.css';
+import { X } from 'lucide-react';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState('highlights');
@@ -177,7 +178,7 @@ function App() {
               aria-label="Fechar carrinho"
               onClick={() => setIsCartOpen(false)}
             >
-              ×
+              <X />
             </button>
             <Cart
               items={cart}
