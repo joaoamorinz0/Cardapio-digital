@@ -1,7 +1,7 @@
-function CategoryNav({ categories, activeCategory, onChange }) {
+function CategoryNav({ items, activeCategory, onChange }) {
     return (
         <nav className="category-nav" aria-label="Categorias do cardápio">
-            {categories.map((category) => (
+            {items.map((category) => (
                 <button
                     key={category.id}
                     type="button"

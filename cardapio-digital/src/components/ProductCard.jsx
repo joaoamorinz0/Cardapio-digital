@@ -1,28 +1,23 @@
-function ProductCard({ product, onAdd }) {
-  const formatPrice = (value) =>
-    new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    }).format(value);
+const formatPrice = (value) =>
+  new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
 
+export default function ProductCard({ product, onOpen, onAdd }) {
   return (
     <article className="product-card">
-      <img src={product.image} alt={product.name} className="product-image" />
+      <button type="button" className="product-body" onClick={() => onOpen(product)}>
+        <h3 className="product-name">{product.name}</h3>
+        <p className="product-description">{product.description}</p>
+        <span className="product-price">{formatPrice(product.price)}</span>
+      </button>
 
-      <div className="product-body">
-        <div className="product-header">
-          <h3>{product.name}</h3>
-          <span>{formatPrice(product.price)}</span>
-        </div>
-
-        <p>{product.description}</p>
-
-        <button type="button" className="add-button" onClick={() => onAdd(product)}>
-          Adicionar
-        </button>
-      </div>
+      <button
+        type="button"
+        className="add-button"
+        aria-label={`Adicionar ${product.name} ao carrinho`}
+        onClick={() => onAdd(product)}
+      >
+        +
+      </button>
     </article>
   );
 }
-
-export default ProductCard;

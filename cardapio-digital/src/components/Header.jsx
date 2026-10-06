@@ -1,24 +1,33 @@
-function Header({ store }) {
-    return (
-        <header className="header">
-            <div className="brand">
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
-                    alt="Logo do Cardápio Digital"
-                    className="logo"
-                />
-                <div>
-                    <h1>{store.name}</h1>
-                    <p className="tagline">{store.tagline}</p>
-                </div>
-            </div>
+export default function Header({ store, rating, onInfo }) {
+  return (
+    <section className="store-banner">
+      <div
+        className="store-cover"
+        style={{ backgroundImage: `url(${store.cover})` }}
+      />
+      <div className="store-card">
+        <img className="store-logo" src={store.logo} alt={`Logo ${store.name}`} />
 
-            <div className="header-meta">
-                <span>📍 Entrega</span>
-                <span>🕒 {store.hours}</span>
-            </div>
-        </header>
-    );
+        <div className="store-text">
+          <h1>{store.name}</h1>
+          <p>{store.tagline}</p>
+          <p>{store.address}</p>
+          
+
+          {rating && (
+            <p className="store-rating">
+              ★ {rating.value.toFixed(1)} <small>({rating.count})</small>
+              {rating.url && (
+                <a href={rating.url} target="_blank" rel="noreferrer"> Google</a>
+              )}
+            </p>
+          )}
+        </div>
+
+        <button type="button" className="info-btn" onClick={onInfo}>
+          Mais Info
+        </button>
+      </div>
+    </section>
+  );
 }
-
-export default Header;
