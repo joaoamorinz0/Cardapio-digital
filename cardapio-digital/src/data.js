@@ -16,19 +16,11 @@ export const storeInfo = {
   troco: '',
 };
 
-export const HeaderCard = {
-  id:1,
-  name: 'Entrega',
-  tagline: 'Em sua região.',
-
-  id:2,
-  name: 'Retirada',
-  tagline: 'No balcão.',
-
-  id:3,
-  name: 'Pedido mínimo',
-  tagline: 'R$ 25,00',
-}
+export const HeaderCard = [
+  { id: 1, name: 'Entrega', tagline: 'Em sua região.' },
+  { id: 2, name: 'Retirada', tagline: 'No balcão.' },
+  { id: 3, name: 'Pedido mínimo', tagline: 'R$ 25,00' },
+];
 
 export const categories = [
   { id: 'hamburgueres', name: 'Hambúrgueres' },

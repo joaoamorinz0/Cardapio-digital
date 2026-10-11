@@ -1,6 +1,5 @@
 
-
-export default function Header({ store, rating, onInfo }) {
+export default function Header({ store, onInfo }) {
   return (
     <section className="store-banner">
       <div
@@ -15,6 +14,5 @@ export default function Header({ store, rating, onInfo }) {
         </button>
       </div>
     </section>
-    
   );
 }
