@@ -58,7 +58,7 @@ cardapio-digital/
 │   ├── pages/
 │   ├── services/
 │   ├── styles/
-|  ├── utils
+|   ├── utils
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
