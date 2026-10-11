@@ -47,19 +47,27 @@ Criar uma solução simples para o cliente e prática para o estabelecimento.
 
 ```bash
 cardapio-digital/
+├── docs
+    ├── design
 ├── public/
 ├── src/
+|   ├── assets
 │   ├── components/
+|   ├── context/
+|   ├── hooks/
 │   ├── pages/
 │   ├── services/
 │   ├── styles/
+|  ├── utils
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
 ├── .env.example
+├── .gitignore
 ├── eslint.config.js
 ├── index.html
+├── package-lock.json
 ├── package.json
 ├── README.md
 ├── vite.config.js
@@ -99,7 +107,6 @@ Exemplo:
 ```env
 VITE_SUPABASE_URL=https://SEU_PROJETO.supabase.co
 VITE_SUPABASE_ANON_KEY=sua-chave-anon
-VITE_WHATSAPP_NUMBER=5511999999999
 ```
 
 ## 📌 Roadmap
