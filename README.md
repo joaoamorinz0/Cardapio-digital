@@ -109,14 +109,14 @@ VITE_WHATSAPP_NUMBER=5511999999999
 - [x] Inicialização do projeto
 - [x] Estrutura básica de arquivos
 - [x] Componentes iniciais
-- [ ] Navegação do cardápio
-- [ ] Produtos e categorias
+- [x] Navegação do cardápio
+- [x] Produtos e categorias
 
 ### Fase 02 — Pedido
 
-- [ ] Carrinho
-- [ ] Adicionais
-- [ ] Observações
+- [x] Carrinho
+- [x] Adicionais
+- [x] Observações
 - [ ] Checkout
 - [ ] WhatsApp
 
