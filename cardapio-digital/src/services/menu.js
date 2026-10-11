@@ -67,6 +67,7 @@ export async function fetchMenu(slug) {
       acceptsPickup: cfg.data?.aceita_retirada ?? true,
       acceptsDelivery: cfg.data?.aceita_entrega ?? true,
       orderMessage: cfg.data?.mensagem_pedido ?? '',
+      banners: [],
       deliveryFee: 0, // a taxa real vem da região escolhida no checkout
     },
     categories: cats.data.map((c) => ({ id: c.id, name: c.nome, featured: c.destaque })),

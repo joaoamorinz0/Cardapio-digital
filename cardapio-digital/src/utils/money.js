@@ -4,3 +4,7 @@ export function formatMoney(value) {
     currency: 'BRL',
   }).format(Number(value) || 0);
 }
+
+export function parseMoney(value) {
+  return Number(value) || 0;
+}
